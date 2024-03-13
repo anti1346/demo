@@ -1,5 +1,5 @@
 # 빌드 단계
-FROM gradle:8.6-jdk17-jammy as build
+FROM gradle:8.6-jdk17-jammy as builder
 
 ENV APP_HOME=/apps
 
@@ -7,9 +7,8 @@ WORKDIR $APP_HOME
 
 # 의존성 파일 복사
 COPY build.gradle settings.gradle gradlew $APP_HOME
-COPY gradlew $APP_HOME/gradlew
 RUN chmod +x gradlew
-COPY src $APP_HOME/src
+COPY src src
 
 # 빌드 수행
 RUN ./gradlew build
