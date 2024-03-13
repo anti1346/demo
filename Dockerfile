@@ -15,7 +15,7 @@ COPY src $APP_HOME/src
 RUN ./gradlew build
 
 # 런타임 단계
-FROM openjdk:17.0-jdk-oraclelinux8
+FROM openjdk:17-jdk-oraclelinux8
 
 ENV APP_HOME=/apps
 
