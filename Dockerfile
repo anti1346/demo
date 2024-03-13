@@ -5,10 +5,16 @@ ENV APP_HOME=/apps
 
 WORKDIR $APP_HOME
 
-# 의존성 파일 복사
-COPY build.gradle settings.gradle gradlew $APP_HOME
+# Gradle Wrapper 파일 복사
+COPY gradle $APP_HOME/gradle
+COPY gradlew $APP_HOME
+
+# Gradle Wrapper 실행 권한 설정
 RUN chmod +x gradlew
-COPY src src
+
+# 소스 코드 복사
+COPY build.gradle settings.gradle $APP_HOME
+COPY src $APP_HOME/src
 
 # 빌드 수행
 RUN ./gradlew build
