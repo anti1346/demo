@@ -1,3 +1,4 @@
+#Dockerfile
 FROM openjdk:17-jdk-oraclelinux8
 
 ENV APP_HOME=/apps
