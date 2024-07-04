@@ -1,10 +1,10 @@
 # Spring Boot DEMO
 
 ## gradlew 빌드
-```angular2html
+```
 ./gradlew buil
 ```
-```angular2html
+```
 java -jar build/libs/demo-0.0.1-SNAPSHOT.jar
 ```
 
@@ -33,11 +33,9 @@ docker buildx build --no-cache --platform linux/amd64,linux/arm64 --tag anti1346
 ```
 docker run -d -p 8181:8080 --name demo anti1346/demo:0.0.1
 ```
-```angular2html
+```
 docker exec -it demo bash
 ```
 ```
 docker run -it --rm -p 8181:8080 --name demo anti1346/demo:0.0.1 bash
 ```
-
- 
