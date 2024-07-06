@@ -36,9 +36,9 @@ class HelloWorldController {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        
-        return "Hello, World from Blue-Green Deployment!!!<br>The current time is " + formattedDateTime + 
-               ".<br>Hostname: " + hostname + 
+
+        return "Hello, World from Blue-Green Deployment!!!<br>Current time " + formattedDateTime +
+               ".<br>Hostname: " + hostname +
                ".<br>IP Address: " + ipAddress;
     }
 }
